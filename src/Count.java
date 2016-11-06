@@ -21,22 +21,22 @@ public class Count {
         @Override
         public void run() {
             increment();
-            System.out.format("%s: %s%n", Thread.currentThread().getName(), value());
+            System.out.format("%s: value %s%n", Thread.currentThread().getName(), value());
         }
     }
 
     public static void main(String[] args) {
         System.out.println("Start");
         Counter counter = new Counter();
-        System.out.format("%s: %s%n", Thread.currentThread().getName(), counter.value());
+        System.out.format("%s: value %s%n", Thread.currentThread().getName(), counter.value());
 
         /*Thread t1 = new Thread(counter);
         t1.start();
 
         Thread t2 = new Thread(counter);
         t2.start();*/
-        
-        for (int i=0; i<51; i++) {
+
+        for (int i=0; i<50; i++) {
             Thread t = new Thread(counter);
             t.start();
         }
