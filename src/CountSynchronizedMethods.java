@@ -20,6 +20,7 @@ public class CountSynchronizedMethods {
         @Override
         public void run() {
             increment();
+            //decrement();
             System.out.format("%s: value %s%n", Thread.currentThread().getName(), value());
         }
     }

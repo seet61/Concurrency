@@ -21,12 +21,13 @@ public class Count {
         @Override
         public void run() {
             increment();
+            //decrement();
             System.out.format("%s: value %s%n", Thread.currentThread().getName(), value());
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("Start");
+        System.out.println("Start Count");
         Counter counter = new Counter();
         System.out.format("%s: value %s%n", Thread.currentThread().getName(), counter.value());
 
