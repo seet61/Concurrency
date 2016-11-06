@@ -13,10 +13,6 @@ public class CountSynchronizedMethods {
             c--;
         }
 
-        public CounterSync() {
-
-        }
-
         public synchronized int value() {
             return c;
         }
