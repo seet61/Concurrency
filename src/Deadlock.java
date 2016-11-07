@@ -18,6 +18,7 @@ public class Deadlock {
         public synchronized void bow(Friend bower) {
             System.out.format("%s: %s has bowed to me!%n", this.name, bower.getName());
             bower.bowBack(this);
+            //bowBack(this);
         }
 
         public synchronized void bowBack(Friend bower) {
@@ -41,5 +42,7 @@ public class Deadlock {
                 gaston.bow(alphonse);
             }
         }).start();
+
+
     }
 }
