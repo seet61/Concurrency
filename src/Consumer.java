@@ -22,7 +22,7 @@ public class Consumer implements Runnable {
             System.out.format("MESSAGE RECEIVED: %s%n", message);
             try {
                 int interval = random.nextInt(5000);
-                System.out.println(Thread.currentThread().getName() + ": interval" + interval);
+                System.out.println(Thread.currentThread().getName() + ":Consumer: interval " + interval);
                 Thread.sleep(interval);
             } catch (InterruptedException e) {}
         }

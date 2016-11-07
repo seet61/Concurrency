@@ -29,7 +29,7 @@ public class Producer implements Runnable{
             drop.put(importantInfo[i]);
             try {
                 int interval = random.nextInt(5000);
-                System.out.println(Thread.currentThread().getName() + ": interval" + interval);
+                System.out.println(Thread.currentThread().getName() + ":Producer: interval " + interval);
                 Thread.sleep(interval);
             } catch (InterruptedException e) {}
         }
