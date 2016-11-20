@@ -22,7 +22,7 @@ public class Producer implements Runnable{
                 "Little lambs eat ivy",
                 "A kid will eat ivy too"
         };
-
+ 
         Random random = new Random();
 
         for (int i=0; i < importantInfo.length; i++) {
